@@ -1,238 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-	  <!-- Charset attribute for the webpage -->
+<head>
+
+	<!-- Charset attribute for the webpage -->
     <meta charset="utf-8">
 
-    <!-- Meta, stylesheets and scripts -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <link rel="stylesheet" href="styles/hub/main.css">
-    <link rel="stylesheet" href="styles/hub/mobile.css">
-    <link rel="icon" href="img/assets/hub/favicon.ico">
-    <!-- For reavel on scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Bootstrap stylesheets and scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <script type="text/javascript" src="scripts/logo_slide.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/carousel.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+
     <!-- Title -->
-    <title>Hacklahoma</title>
+    <title>Hacklahoma 2019</title>
 
-    <!-- Description for search engines -->
-    <meta name="description" content="Hacklahoma. February 8-9. Come create with us at our third annual hackathon!" />
-  </head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/assets/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/assets/favicon/safari-pinned-tab.svg" color="#ffd58a">
+    <meta name="msapplication-config" content="img/assets/favicon/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
 
-  <body>
-    <!-- TODO: FIX WEIRD BEHAVIOR -->
-    <!-- Background -->
-    <div data-aos="fade-in" class="background-container">
-      <img class="cloud" src="img/assets/hub/cloud-med.svg" alt="">
-      <img class="cloud" src="img/assets/hub/cloud-med.svg" alt="">
-      <img class="cloud" src="img/assets/hub/cloud-small.svg" alt="">
-      <img class="cloud" src="img/assets/hub/cloud-med.svg" alt="">
-      <img class="cloud" src="img/assets/hub/cloud-small.svg" alt="">
-      <img class="cloud" src="img/assets/hub/cloud-small.svg" alt="">
-      <img class="kite" src="img/assets/hub/kite-blue.png" alt="">
+    <!-- Description for search engines. -->
+    <meta name="description" content="Hacklahoma. February 9-10 2019. Come create with us at our second annual hackathon!" />
+
+    <!-- Facebook pixel stuff. -->
+    <meta property="og:title" content="HACKLAHOMA">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hacklahoma.org/img/facebookCardImage.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="https://hacklahoma.org">
+    <meta property="og:description" content="Hacklahoma. February 9-10 2019. Come create with us at our second annual hackathon!">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1555823664723200'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1555823664723200&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+    <!-- FB Pixel that tracks when people visit our website -->
+    <script>
+    fbq('track', 'ViewContent');
+    </script>
+</head>
+
+<body>
+    <div id="parallax-container">
+        <img class="parallax display-none" id="parallax-0" src="img/assets/Background.svg">
+        <img class="parallax display-none" id="parallax-1" src="img/assets/Farthest Hill.svg">
+        <img class="parallax display-none" id="parallax-2" src="img/assets/Middle Hill.svg">
+        <img class="parallax display-none" id="parallax-3" src="img/assets/Closest Hill.svg">
     </div>
-
-    <div class="content-container">
-      <!-- HEADER ------------>
-      <section>
-        <!-- Navbar -->
-        <div class="header-container">
-          <div id="nav-background">
-          </div>
-          <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <nav>
-            <ul class="nav-links">
-              <li id="home-tab">Home</li>
-              <li id="about-tab">About</li>
-              <li id="newest-tab">2020</li>
-              <li id="archive-tab">Archive</li>
-              <li id="contact-tab">Contact</li>
-            </ul>
-          </nav>
-          <!-- Logo -->
-          <div class="logo-container">
-            <img id="logo" src="img/assets/hub/flying-logo.png" alt="">
-          </div>
-          <!-- Header Content -->
-          <div class="header-text-container">
-            <p class="title">Hacklahoma</p>
-            <p class="subtitle">Join us for Oklahoma's <span class="highlight"> best </span> hackathon!</p>
-            <div class="buttons">
-              <a href="2020">
-                <div style="background:#75C079;" class="button">
-                <p>Hacklahoma 2020</p>
-              </div></a>
-              <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScBR51amjtUec0MJSzVzPiop8uZ-a4kqCp5ow6OIsYIQSEHIQ/viewform">
-                <div style="background:#F4D06F;" class="button">
-                <p>Stay updated</p>
-              </div></a>
-              <!-- <div style="background:#5B6299;" class="button">
-                <p>Join the team</p>
-              </div> -->
-            </div>
-          </div>
+    <div id="bee-1" class="bee display-none">
+        <img src="img/assets/hacklahoma_bee.svg" alt="A Really Cute Bee">
+        <div id="bee-1-speed-indicator" class="display-none" style="background-color: blue; height: 50px; width: 3px;">
+            <div id="bee-1-speed" style="background-color: red; height: 100%; width: 3px;"></div>
         </div>
-      </section>
-
-      <!-- ABOUT ------------>
-      <!-- for tab link -->
-      <a name="about"></a>
-      <section class="section-container">
-        <div data-aos="fade-right" class="about-container">
-          <div class="video-container right">
-            <img src="img/assets/hub/video-thumbnail.png" alt="">
-          </div>
-          <div class="about-info left">
-            <h1>What's Hacklahoma?</h1>
-            <p>Hacklahoma is an annual 24-hour hackathon held at the University of Oklahoma. Over three hundred students from across the country come to collaborate, build, and share their awesome projects with us! Hacklahoma provides a comfortable learning environment for all hackers to use their creativity and innovation at its full potential.</p>
-          </div>
-        </div>
-
-        <div data-aos="fade-left" class="about-container">
-          <div class="video-container left">
-            <img src="img/media/hacklahoma-staff-2018_cropped.jpg" alt="">
-          </div>
-          <div class="about-info right">
-            <h1>Who We Are</h1>
-            <p>We are a group of students from the University of Oklahoma who are passionate about fostering innovation and collaboration in Oklahoma’s tech industry. Today, our team consists of 12 individuals across 4 subteams - Marketing, Operations, Sponsoring & Finance, and Technology.</p>
-          </div>
-        </div>
-
-        <div data-aos="fade-right" class="about-container">
-          <div class="video-container right">
-            <img src="img/media/hackers-overhead_cropped.jpg" alt="">
-          </div>
-          <div class="about-info left">
-            <h1>What We Do</h1>
-            <p>Hacklahoma’s mission is to kindle creativity and innovation in Oklahoma and develop a thriving tech community. We strive to be an organization where all of our team members feel included and have opportunities to gain experience and grow.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ARCHIVE ------------>
-      <!-- for tab link -->
-      <a name="newest"></a>
-      <section class="section-container">
-        <div data-aos="fade-up" id="newest-container">
-          <div class="newest-text">
-            <h1 class="newest-title">Hacklahoma</h1>
-            <div class="highlight"></div><p class="newest-subtitle">in <span>2020</span></p>
-            <div id="newest-button" style="background:#75C079;" class="button">
-              <p>Learn more</p>
-            </div>
-          </div>
-
-          <div id="newest-card" class="newest-card archive-item">
-            <h1>Coming<br>soon</h1>
-            <p>2020</p>
-          </div>
-        </div>
-
-        <div class="archive-container">
-          <a name="archive"></a>
-          <ul class="archive-row2">
-            <li data-aos="fade-right" id="year2019" class="archive-item">
-              <!-- for tab link -->
-
-              <img src="img/assets/logo2019.png">
-              <p>2019<p>
-            </li>
-            <li data-aos="fade-left" id="year2018" class="archive-item">
-              <img src="img/assets/logo2018.png">
-              <p>2018<p>
-              <!-- ignore this anchor for button presses -->
-              <a name="archive-info-anchor"></a>
-            </li>
-          </ul>
-          <!-- Use row with 3 columns when needed -->
-          <!-- <ul class="archive-row3">
-            <li class="archive-item">
-              <img src="img/assets/logo2018.png">
-              <p>2018<p>
-            </li>
-            <li class="archive-item">
-              <img src="img/assets/logo2018.png">
-              <p>2018<p>
-            </li>
-            <li class="archive-item">
-              <img src="img/assets/logo2018.png">
-              <p>2018<p>
-            </li>
-          </ul> -->
-        </div>
-
-        <div id="archive-info">
-          <div class="archive-info-container">
-            <div class="head">
-              <h1 id="year">2020</h1>
-              <a id="archive-website" target="_blank" href=""><div class="button"><p>View website</p></div></a>
-            </div>
-
-            <!-- <div class="line"></div> -->
-
-            <div class="stats">
-              <div class="stats-item">
-                <h1 id="participants">200</h1>
-                <p>participants</p>
-              </div>
-              <div class="stats-item">
-                <h1 id="projects">52</h1>
-                <p>projects</p>
-              </div>
-              <div class="stats-item">
-                <h1 id="sponsors">21</h1>
-                <p>sponsors</p>
-              </div>
-            </div>
-
-<!-- TODO: TEAM CONTAINER -->
-            <!-- <div id="team-button">
-              <p>Meet the team</p>
-              <img src="img/assets/hub/arrow-down.svg">
-            </div>
-
-            <div class="team-container">
-
-            </div> -->
-          </div>
-        </div>
-      </section>
+        <p id="bee-1-stats" class="display-none"></p>
+        <p id="bee-1-restr" class="display-none"></p>
     </div>
-    <div class="bottom-content">
-      <!-- CONTACT ------------>
-      <!-- for tab link -->
-      <div class="bottom-container">
-        <a name="contact"></a>
-        <section data-aos="fade-up" class="section-container">
-          <div class="contact-container">
-            <div class="contact-text">
-              <h1>Contact Our Team</h1>
-              <p>We'd love to hear from you! Contact us at <a href="mailto:team@hacklahoma.org">team@hacklahoma.org</a> or through social media. If you plan on sponsoring us, please visit our <a href="#">Sponsor Packet</a>. We look forward to hearing from you!</p>
+    <div id="bee-2" class="bee display-none">
+        <img src="img/assets/hacklahoma_bee.svg" alt="A Really Cute Bee">
+        <div id="bee-2-speed-indicator" class="display-none" style="background-color: blue; height: 50px; width: 3px;">
+            <div id="bee-2-speed" style="background-color: red; height: 100%; width: 3px;"></div>
+        </div>
+        <p id="bee-2-stats" class="display-none"></p>
+        <p id="bee-2-restr" class="display-none"></p>
+    </div>
+    <nav class="navbar">
+        <div class="navbar content">
+            <div class="navbar-half" id="nav-links">
+                <a class="" href="#about-anchor">About</a>
+                <a class="" href="#faq-anchor">FAQ</a>
+                <a class="" href="#sponsors-anchor">Sponsors</a>
             </div>
-          </div>
-          <div class="social-container">
-            <div class="icons">
-              <a href="https://www.facebook.com/Hacklahoma/" target="_blank"><img src="img/assets/hub/facebook.svg" alt=""></a>
-              <a href="https://twitter.com/hacklahoma" target="_blank"><img src="img/assets/hub/twitter.svg" alt=""></a>
-              <a href="https://www.instagram.com/hacklahoma/" target="_blank"><img src="img/assets/hub/instagram.svg" alt=""></a>
+            <a class="navbar-logo-link" href="#splash-anchor"><img class="navbar-logo" src="img/assets/hacklahoma19_centered.svg"/></a>
+            <div class="navbar-half" id="external-links">
+                <!-- <a class="" href="https://hacklahoma.typeform.com/to/ZyRDcW">Mentors</a>
+                <a class="" href="https://hacklahoma.typeform.com/to/D5AhKa">Volunteers</a> -->
+                <a class="" href="./live/index.html">Live</a>
             </div>
-          </div>
+            <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg" alt="Major League Hacking 2019 Hackathon Season"></a>
+        </div>
+    </nav>
+    <a class="anchor" id="splash-anchor"></a>
+    <section class="splash" style="max-height: 750px;">
+        <img class="splash-logo" src="img/assets/hacklahoma19_centered.svg"/>
+        <div class="row justify-around" id="title-row">
+            <h1 class="splash-title">HACKLAHOMA</h1>
+        </div>
+        <div class="row justify-around" id="info-row">
+            <h3>Thank you for hacking with us,<br> see you next year!</h3>
+        </div>
+        <div class="row content justify-between" id="info-row">
+            <div class="">
+                <h3>February 9-10, 2019</h3>
+            </div>
+            <div class="">
+                <h3>The University of Oklahoma</h3>
+            </div>
+        </div>
+    </section>
+    <div class="bg">
+        <a class="anchor" id="about-anchor"></a>
+        <section class="about content">
+            <h3 class="heading">What's Hacklahoma?</h3>
+            <p>Hacklahoma is an annual 24-hour hackathon held at the University of Oklahoma. Three hundred students from across the country will come to collaborate, build, and share their awesome projects with us! Hacklahoma provides a comfortable learning environment for all hackers to use their creativity and innovation at its full potential. We encourage students from all backgrounds, experience levels, and majors to join us for our second year!</p>
         </section>
-        <img data-aos="fade-right" id="bottom-plane" src="img/assets/hub/flying-logo.png" alt="">
-        <img id="trees" src="img/assets/hub/trees.png" alt="">
-        <!-- FOOTER ------------>
-          <div class="footer">
-            <p>Copyright © 2019 <b>Hacklahoma</b> ~ Made with ♥ in Norman</p>
-          </div>
-          <div class="footer-background"></div>
-        </div>
+        <a class="anchor" id="faq-anchor"></a>
+        <section id="faq-background" class="faq">
+            <div class="content">
+                <h3 id="faq-heading" class="heading">FAQ</h3>
+                <div class="faq-desktop">
+                    <div class="bean-pile justify-between">
+                        <div class="bean">
+                            <h5>Sounds cool! But what's a hackathon?</h5>
+                            <p>A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends one to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. - MLH </p>
+                        </div>
+                        <div class="bean">
+                            <h5>Who can attend?</h5>
+                            <p>Any university student over the age of 18 can participate, regardless of major, background, or skill level. Participants must also abide by the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a></p>
+                        </div>
+                        <div class="bean">
+                            <h5>Does this cost anything?</h5>
+                            <p>Admission to Hacklahoma is <b>free</b> for all attendees! Food, drinks, and sleeping areas are provided by us. Travel reimbursement will be granted based on our funding.</p>
+                        </div>
+                        <div class="bean">
+                            <h5>Will there be travel reimbursement?</h5>
+                            <p>For those driving to Hacklahoma from outside of the Norman/OKC metro area, we will reimburse up to $30 for travel costs. To maximize reimbursement, we encourage carpooling (ex: a car of four could get up to $120 in reimbursement).</p>
+                        </div>
+                        <div class="bean">
+                            <h5>Can we have teams?</h5>
+                            <p>We encourage everyone to work with a team! Teams may contain up to 4 people. If you don't have one before coming to Hacklahoma, no worries! We will have a team-building session at the beginning of the hacking period.</p>
+                        </div>
+                        <div class="bean">
+                            <h5>Sweet! What should I bring?</h5>
+                            <p>Please bring your student ID for registration! You should also bring your computer, chargers, any hardware/software you plan on using, cell phone, toiletries, sleeping bag, pillow, and a change of clothes. We also recommend you bring a power strip just in case. </p>
+                        </div>
+                        <div class="bean">
+                            <h5>What if my question didn't get answered?</h5>
+                            <p>Hey, we're here to help! Email us at <a href="mailto:team@hacklahoma.org">team@hacklahoma.org</a> or reach out to us via Facebook, Twitter, or Instagram. </p>
+                        </div>
+                        <div class="bean bean-filler"></div>
+                        <div class="bean bean-filler"></div>
+                        <div class="bean bean-filler"></div>
+                        <div class="bean bean-filler"></div>
+                    </div>
+                </div>
+                <div class="faq-mobile">
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="false" aria-controls="#faq1">Sounds cool! But what's a hackathon?</button>
+                            <div class="collapse multi-collapse" id="faq1">
+                                <div class="card card-body">
+                                    A hackathon is best described as an “invention marathon”. Anyone who has an interest in technology attends one to learn, build & share their creations over the course of a weekend in a relaxed and welcoming atmosphere. - MLH
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="#faq2">Who can attend?</button>
+                            <div class="collapse multi-collapse" id="faq2">
+                                <div class="card card-body">
+                                    Any university student over the age of 18 can participate, regardless of major, background, or skill level. Participants must also abide by the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf">MLH Code of Conduct.</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="#faq3">Does this cost anything?</button>
+                            <div class="collapse multi-collapse" id="faq3">
+                                <div class="card card-body">
+                                    Admission to Hacklahoma is <b>free</b> for all attendees! Food, drinks, and sleeping areas are provided by us. Travel reimbursement will be granted based on our funding.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq4" aria-expanded="false" aria-controls="#faq4">Can we have teams?</button>
+                            <div class="collapse multi-collapse" id="faq4">
+                                <div class="card card-body">
+                                    We encourage everyone to work with a team! Teams may contain up to 4 people. If you don't have one before coming to Hacklahoma, no worries! We will have a team-building session at the beginning of the hacking period.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq5" aria-expanded="false" aria-controls="#faq5">Sweet! What should I bring?</button>
+                            <div class="collapse multi-collapse" id="faq5">
+                                <div class="card card-body">
+                                    Please bring your student ID for registration! You should also bring your computer, chargers, any hardware/software you plan on using, cell phone, toiletries, sleeping bag, pillow, and a change of clothes. We also recommend you bring a power strip just in case.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm">
+                            <button class="collapsed" type="button" data-toggle="collapse" data-target="#faq6" aria-expanded="false" aria-controls="#faq6">What if my question didn't get answered?</button>
+                            <div class="collapse multi-collapse" id="faq6">
+                                <div class="card card-body">
+                                    Hey, we're here to help! Email us at <a href="mailto:team@hacklahoma.org">team@hacklahoma.org</a> or reach out to us via Facebook, Twitter, or Instagram.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a class="anchor" id="sponsors-anchor"></a>
+        <!-- TODO: add 'interested in sponsoring?'? <p></p>-->
+        <section class="sponsors content" id="sponsors">
+            <h3 class="heading">Sponsors</h3>
+            <p>Interested in sponsoring?  Please contact us at <a href="mailto:sponsor@hacklahoma.org">sponsor@hacklahoma.org</a>.</p>
+            <div class="bean-pile">
+                <div class="bean"><a href="https://www.jpmorganchase.com"><img src="img/sponsors/jpmc.png"/></a></div>
+                <div class="bean"><a href="https://www.tailwindapp.com/"><img src="img/sponsors/tailwind.png"/></a></div>
+                <div class="bean"><a href="https://www.karsun-llc.com"><img src="img/sponsors/karsun.png"/></a></div>
+                <div class="bean"><a href="https://www.boeing.com/"><img src="img/sponsors/boeing.png"/></a></div>
+                <div class="bean"><a href="https://cloud.google.com/"><img src="img/sponsors/googleCloud.svg"/></a></div>
+                <div class="bean"><a href="https://risk.lexisnexis.com/"><img src="img/sponsors/lexisNexis.png"/></a></div>
+                <div class="bean"><a href="https://www.devonenergy.com/"><img src="img/sponsors/devon.png"/></a></div>
+                <div class="bean"><a href="https://www.twilio.com/"><img src="img/sponsors/twilio.png"/></a></div>
+                <div class="bean"><a href="https://www.hobbylobby.com"><img src="img/sponsors/hobbyLobby.png"/></a></div>
+                <div class="bean"><a href="https://www.premiumpopperspopcorn.com/"><img src="img/sponsors/premiumPoppers.svg"/></a></div>
+                <div class="bean"><a href="https://www.accenture.com/us-en/technology-index"><img src="img/sponsors/accenture.png"/></a></div>
+                <div class="bean"><a href="https://www.kochind.com/"><img src="img/sponsors/koch.png"/></a></div>
+                <div class="bean"><a href="https://www.linode.com"><img src="img/sponsors/linode.png"/></a></div>
+                <div class="bean"><a href="https://balsamiq.com/"><img src="img/sponsors/balsamiq.png"/></a></div>
+                <div class="bean"><a href="https://www.ghostery.com/"><img src="img/sponsors/ghostery.png"/></a></div>
+                <div class="bean"><a href="https://www.toka.io/"><img src="img/sponsors/toka.png"/></a></div>
+                <div class="bean bean-filler"></div>
+                <div class="bean bean-filler"></div>
+                <div class="bean bean-filler"></div>
+                <!-- <div class="bean bean-filler"></div> -->
+            </div>
+            <div class="bean-pile">
+                <div class="bean-small"><a href="https://www.digitalocean.com/"><img src="img/sponsors/digitalOcean.png"/></a></div>
+                <div class="bean-small"><a href="https://estimote.com/"><img src="img/sponsors/estimote.png"/></a></div>
+                <div class="bean-small"><a href="https://framer.com/"><img src="img/sponsors/framer.png"/></a></div>
+                <div class="bean-small"><a href="https://www.gitkraken.com/"><img src="img/sponsors/gitKraken.png"/></a></div>
+                <div class="bean-small"><a href="https://www.sketchapp.com/"><img src="img/sponsors/sketch.png"/></a></div>
+                <div class="bean-small"><a href="https://stae.co/"><img src="img/sponsors/stae.png"/></a></div>
+                <div class="bean-small"><a href="https://insomniacookies.com/"><img src="img/sponsors/insomnia.jpg"/></a></div>
+                <div class="bean-small"><a href="https://www.blumaniaenergy.com/"><img src="img/sponsors/blumania.png"/></a></div>
+                <div class="bean-small"><a href="#"><img src="img/sponsors/scottyShaw.png"/></a></div>
+                <div class="bean-small"><a href="https://www.invisionapp.com/"><img src="img/sponsors/inVision.png"/></a></div>
+                <div class="bean-small"><a href="https://www.techlahoma.org/"><img src="img/sponsors/techlahoma.png"/></a></div>
+                <div class="bean-small"><a href="https://www.wolfram.com/language/"><img src="img/sponsors/wolfram.png"/></a></div>
+                <div class="bean-small"><a href="https://www.stickermule.com/uses/laptop-stickers?utm_source=sponsorship&utm_campaign=mlh-sponsorship&utm_medium=referral"><img src="img/sponsors/stickerMule.svg"/></a></div>
+                <div class="bean-small"><a href="http://www.ou.edu/coe"><img src="img/sponsors/galloglyCollege.png"/></a></div>
+                <div class="bean-small"><a href="http://www.ou.edu/alumni/saa"><img src="img/sponsors/studentAlumni.png"/></a></div>
+                <div class="bean-small"><a href="https://hackdfw.com/"><img src="img/sponsors/hackDFW.jpg"/></a></div>
+                <div class="bean-small bean-filler"></div>
+                <div class="bean-small bean-filler"></div>
+                <div class="bean-small bean-filler"></div>
+                <!-- <div class="bean-small bean-filler"></div> -->
+            </div>
+        </section>
+        <section class="media content">
+            <h3 class="heading">Media</h3>
+            <div class="bean-pile">
+                <div class="bean"><a href="img/media/1.png"><img src="img/media/1_thumb.png"/></a></div>
+                <div class="bean"><a href="img/media/2.png"><img src="img/media/2_thumb.png"/></a></div>
+                <div class="bean"><a href="img/media/3.png"><img src="img/media/3_thumb.png"/></a></div>
+                <div class="bean"><a href="img/media/4.png"><img src="img/media/4_thumb.png"/></a></div>
+                <div class="bean"><a href="img/media/5.png"><img src="img/media/5_thumb.png"/></a></div>
+                <div class="bean bean-filler"></div>
+                <!--<div class="bean bean-filler"></div>-->
+            </div>
+        </section>
+        <footer>
+            <p>© 2019 Hacklahoma</p>
+            <div class="content">
+                <a href="https://www.facebook.com/Hacklahoma/"><img src="img/assets/facebook_d3.svg"></a>
+                <a href="https://twitter.com/hacklahoma"><img src="img/assets/twitter_d3.svg"></a>
+                <a href="https://www.instagram.com/hacklahoma/"><img src="img/assets/insta_d3.svg"></a>
+            </div>
+        </footer>
     </div>
-
-    <script src="scripts/hub/scripts.js"></script>
-    <script src="scripts/hub/clouds.js"></script>
-  </body>
+</body>
 </html>
